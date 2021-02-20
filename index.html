@@ -3,35 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentol Portofolio</title>
+    <title>Christopher's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="navbar-container">
         <ul>
-            <li><a href="#aboutme">About Me</a></li>
-            <li><a href="#portofolio">Portofolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+            <li><a href="#aboutme">ABOUT ME</a></li>
+            <li><a href="#portofolio">PORTFOLIO</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+         </ul>
     </div>
     <div class="welcome">
-        <h1>Welcome to Portofolio Christopher!</h1>
+        <h1>Welcome to Christopher's Portfolio!</h1>
     </div>
     <br>
     <div class="aboutme">
         <h1 id="aboutme">ABOUT ME</h1><hr><br>
         <div class="profil">
-            <img src="FotoBinusian.jpg" alt="Foto diri">
-            <h1>CHRISTOPHER VINANTIUS</h1>
+            <div class="nama">
+                <h1 id="namalengkap">CHRISTOPHER VINANTIUS</h1>
+                <h3>Front-End Web Developer</h3>
+            </div>
+            <img src="FotoBinusian.png" alt="Foto diri">
         </div>
-        <br><br>
+        <br>
         <div class="bio">
             <br>
-            <p>Saya adalah seorang mahasiswa BINUS University Kemanggisan angkatan Binusian 2024 jurusan Teknik Informatika. Selain itu, saya juga menjadi member organisasi BNCC (Bina Nusantara Computer Club) dan mengikuti kelas LnT (Learning and Training) Web Design.</p>
+            <p>Saya adalah mahasiswa BINUS University Kemanggisan (Binusian 2024) jurusan Teknik Informatika (School of Computer Science). Selain itu, saya menjadi member organisasi BNCC (Bina Nusantara Computer Club) dan mengikuti kelas LnT (Learning and Training) Web Design.<br><br>Saya mengambil kelas Web Design karena saya tertarik untuk memperdalam pengetahuan serta memperkaya pengalaman mengenai pemrograman front-end dari sebuah website. <br><br>Sebelumnya saya sudah mempelajari dasar-dasar pemrograman front-end sejak lulus Sekolah Menengah Atas, sekaligus mempelajari dasar-dasar pemrograman dengan bahasa C untuk persiapan perkuliahan.<br><br>Awalnya hanya sekadar 'iseng', namun perlahan saya merasa bahwa saya memang tertarik seputar desain website. Saya tidak hanya ingin sekadar mendesain, tetapi saya juga ingin menuangkan ide-ide desain yang saya miliki dalam bentuk kodingan dengan berbagai bahasa pemrograman yang umumnya digunakan.<br><br>Pekerjaan impian saya di masa depan adalah menjadi seorang front-end web developer, karena menurut saya, pekerjaan ini akan dibutuhkan dalam jumlah banyak di masa depan seiring dengan perkembangan teknologi pengembangan website.</p>
         </div>
         <br><br>
         <div class="pendidikan">
-            <h2>Riwayat Pendidikan</h2>
+            <div class="detailpendidikan">
+                <h2>Riwayat Pendidikan</h2>
             <br>
             <table>
                 <tr>
@@ -55,12 +59,29 @@
                     <td>SDK Kalam Kudus III Jakarta</td>
                 </tr>
             </table>
+            </div>
+            <img id="pendidikan" src="Learning.svg" alt="Ilustrasi belajar">
         </div>
         <br><br>
+        <div class="software">
+            <div class="detailsoftware">
+                <h2>Software yang Saya Kuasai</h2>
+                <br>
+                <ul>
+                <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+                <li>Adobe Photoshop</li>
+                <li>Microsoft Visual Studio Code</li>
+                <li>Dev C++</li>
+            </ul>
+            </div>
+            <img id="software" src="Software.svg" alt="Ilustrasi software">
+        </div>
+        <br>
         <div class="bahasa">
-            <h2>Bahasa Pemrograman yang Saya Kuasai</h2>
-            <br>
-            <ul>
+            <div class="detail">
+                <h2>Bahasa Pemrograman yang Saya Kuasai</h2>
+                <br>
+                <ul>
                 <li>C</li>
                 <li>C++</li>
                 <li>Java</li>
@@ -68,40 +89,40 @@
                 <li>CSS</li>
                 <li>JavaScript</li>
             </ul>
+            </div>
+            <img id="code" src="Coding.svg" alt="Ilustrasi coding">
         </div>
     </div>
     <br>
     <div class="portofolio">
-        <h1 id="portofolio">PORTOFOLIO</h1><hr><br>
+        <h1 id="portofolio">PORTFOLIO</h1><hr><br>
     </div>
     <br>
     <div class="contact">
         <h1 id="contact">CONTACT</h1><hr><br>
-        <form action="comment.php" method="POST">
-            <label for="name">Nama:</label><br>
-            <input type="text" id="name" name="name" placeholder="Nama Lengkap"><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="Email"><br><br>
-            <label for="account">LinkedIn:</label><br>
-            <input type="text" id="account" name="account" placeholder="Akun LinkedIn"><br><br>
-            <label for="comment">Komentar:</label><br>
-            <textarea name="comment" rows="10" cols="30"></textarea><br><br>
-            <button type="button" onclick="alert('Comment has successfully been posted!')">Submit</button>
-        </form>
+            <div class="formulir">
+            <img src="Contact.svg" id="contactme" alt="Ilustrasi kontak">
+            <form>
+                <label for="name">Nama:</label><br>
+                <input type="text" id="name" name="name" required placeholder="Nama Lengkap"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required placeholder="Email"><br><br>
+                <label for="account">LinkedIn:</label><br>
+                <input type="text" id="account" name="account" required placeholder="Akun LinkedIn"><br><br>
+                <label for="comment">Komentar:</label><br>
+                <textarea name="comment" rows="10" cols="30" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-    <script>
-        // let acc = document.getElementsByClassName("accordion");
-        // for(let i=0; i<acc.length; i++){
-        //     acc[i].addEventListener("click", function(){
-        //         this.classList.toggle("active");
-        //         let panel = this.nextElementSibling;
-        //         if(panel.style.display === "block"){
-        //             panel.style.display = "none";
-        //         }else{
-        //             panel.style.display = "block";
-        //         }
-        //     });
-        // }
-    </script>
+    <br>
+    <h3 id="socialbardesc">Anda juga dapat menghubungi saya melalui akun-akun media sosial berikut!</h3>
+    <div class="socialbar">
+        <a href="https://www.facebook.com/vinanf1" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com/cvinantius" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/christophervinantius" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/christopher-vinantius-565a701b6/" target="_blank">Linkedin</a>
+        <a href="https://www.github.com/christophervinantius" target="_blank">Github</a>
+    </div>
 </body>
 </html>
