@@ -96,6 +96,9 @@
     <br>
     <div class="portofolio">
         <h1 id="portofolio">PORTFOLIO</h1><hr><br>
+        <div class="portfoliopage">
+            <h2>Berikut adalah beberapa produk terkait dengan desain web yang sedang saya kerjakan hingga saat ini.</h2><br>
+        </div>
     </div>
     <br>
     <div class="contact">
@@ -110,8 +113,10 @@
                 <label for="account">LinkedIn:</label><br>
                 <input type="text" id="account" name="account" required placeholder="Akun LinkedIn"><br><br>
                 <label for="comment">Komentar:</label><br>
-                <textarea name="comment" rows="10" cols="30" required></textarea><br><br>
-                <button type="submit">Submit</button>
+                <textarea id="comment" rows="10" cols="30"></textarea><br>
+                <p id="addition">Komentar harus terdiri dari antara 5-100 kata.</p>
+                <br>
+                <button onclick="validateComment()">Submit</button>
             </form>
         </div>
     </div>
@@ -124,5 +129,24 @@
         <a href="https://www.linkedin.com/in/christopher-vinantius-565a701b6/" target="_blank">Linkedin</a>
         <a href="https://www.github.com/christophervinantius" target="_blank">Github</a>
     </div>
+    <script>
+        function validateComment(){
+            let words = document.getElementById("comment").value;
+            let count = 0;
+            for(let i=0; i<words.length; i++){
+                let currentChar = words[i];
+                if(currentChar == " "){
+                    count++;
+                }
+            }
+            count++;
+            if(count < 5 || count > 100){
+                alert('Komentar harus terdiri dari antara 5-100 kata!');
+                event.preventDefault();
+            }else{
+                alert('Komentar berhasil diposting!');
+            }
+        }
+    </script>
 </body>
 </html>
