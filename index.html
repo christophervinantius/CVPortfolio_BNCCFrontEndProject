@@ -84,7 +84,6 @@
                 <ul>
                 <li>C</li>
                 <li>C++</li>
-                <li>Java</li>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
@@ -97,7 +96,23 @@
     <div class="portofolio">
         <h1 id="portofolio">PORTFOLIO</h1><hr><br>
         <div class="portfoliopage">
-            <h2>Berikut adalah beberapa produk terkait dengan desain web yang sedang saya kerjakan hingga saat ini.</h2><br>
+            <h2>Berikut adalah beberapa produk terkait dengan desain web yang sedang saya kerjakan hingga saat ini.</h2>
+            <p>Klik pada masing-masing gambar untuk melihat keterangan lebih lanjut.</p><br><br>
+            <div class="slideshow">
+                <img id="portimage1" src="Portfolio1.png" alt="SOCSLogin">
+                <div id="modal1" class="modal">
+                    <span id="close1" class="close">&times;</span>
+                    <img class="modal-content" id="port1">
+                    <div id="caption1">Design ini sebenarnya adalah design mock-up saya dari login page website SOCS1 dengan perubahan sehingga design menjadi lebih fresh dan modern. Masih ada kemungkinan perubahan design lainnya seperti di main page dan standing pagenya.</div>
+                </div>
+                <br><br>
+                <img id="portimage2" src="Portfolio2.png" alt="MySchedule">
+                <div id="modal2" class="modal">
+                    <span id="close2" class="close">&times;</span>
+                    <img class="modal-content" id="port2">
+                    <div id="caption2">Design MySchedule adalah design improvisasi dari app MyClass yang telah ada sebelumnya, dengan penambahan fitur yaitu kita dapat melihat jadwal ujian serta jadwal pembayaran hal yang terkait dengan finansial berikutnya. Selain itu, dalam jadwal kelas difokuskan untuk memperlihatkan jadwal yang tersedia pada hari itu, baru di bawahnya diperlihatkan jadwal di hari-hari berikutnya untuk mempermudah pencarian informasi jadwal kelas bagi mahasiswa. Masih ada kemungkinan penambahan fitur lainnya seperti memungkinkan mahasiswa untuk mengunduh bahan atau materi pembelajaran yang terkait dengan sesi atau jadwal kelas yang terdapat di hari tersebut.</div>
+                </div>
+            </div>
         </div>
     </div>
     <br>
@@ -146,6 +161,32 @@
             }else{
                 alert('Komentar berhasil diposting!');
             }
+        }
+
+        let modal1 = document.getElementById("modal1");
+        let image1 = document.getElementById("portimage1");
+        let modalimage1 = document.getElementById("port1");
+        image1.onclick = function(){
+            modal1.style.display = "block";
+            modalimage1.src = this.src;
+            let caption1 = document.getElementById("caption1").innerHTML;
+        }
+        let span1 = document.getElementById("close1");
+        span1.onclick = function(){
+            modal1.style.display = "none";
+        }
+
+        let modal2 = document.getElementById("modal2");
+        let image2 = document.getElementById("portimage2");
+        let modalimage2 = document.getElementById("port2");
+        image2.onclick = function(){
+            modal2.style.display = "block";
+            modalimage2.src = this.src;
+            let caption2 = document.getElementById("caption2").innerHTML;
+        }
+        let span2 = document.getElementById("close2");
+        span2.onclick = function(){
+            modal2.style.display = "none";
         }
     </script>
 </body>

@@ -73,6 +73,8 @@ hr{
 img{
     width: 20%;
     margin-left: 375px;
+    animation-name: fadeIn;
+    animation-duration: 4s;
 }
 
 .portofolio{
@@ -80,6 +82,73 @@ img{
     margin-right: 25px;
     animation-name: slideRight;
     animation-duration: 2s;
+    text-align: center;
+}
+
+.slideshow{
+    display: flex;
+    flex-direction: column;
+}
+
+#portimage1, #portimage2{
+    border: 2px solid black;
+    border-radius: 30%;
+    width: 40%;
+    transition: 0.5s;
+}
+
+#portimage1:hover, #portimage2:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    overflow: auto;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    padding: 50px;
+}
+
+.modal-content{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+#caption1, #caption2{
+    display: block;
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    color: white;
+    padding: 10px;
+}
+
+.modal-content, #caption1, #caption2{
+    animation-name: zoomIn;
+    animation-duration: 0.5s;
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background-color: red;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.close:hover{
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 .contact{
@@ -305,6 +374,11 @@ button{
     color: white;
 }
 
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 @keyframes welcome_anim{
     0% {background-color: blue;}
     100% {background-color: red;}
@@ -333,6 +407,15 @@ button{
     }
     to{
         transform: translate(0, 0)
+    }
+}
+
+@keyframes zoomIn{
+    from{
+        transform: scale(0)
+    }
+    to{
+        transform: scale(1)
     }
 }
 
